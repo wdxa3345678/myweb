@@ -1,0 +1,34 @@
+h1,h2,h3,h4,span{font-family:"Helvetica", "Arial","LiHei Pro","黑體-繁","微軟正黑體", sans-serif,Helvetica,Arial,sans-serif}
+
+ul{list-style:none}
+
+#header .container #navbarResponsive{margin-left: 50%}
+
+#header .nav-link{margin-right:50px}
+
+header.masthead{
+            margin-bottom:50px;
+            background:no-repeat center;
+            background-attachment:scroll;
+            position:relative;
+            background-size:cover}
+header.masthead.overlay{
+            position:absolute;
+            top:0;left:0px;
+            height:100%;
+            width:100%;
+            opacity:5,
+            text-align:center}
+header.masthead {padding:200px 0 150px;color:#100F}
+
+header.masthead .site-heading h1{
+            font-size:5rem;
+            font-weight:bolder}
+
+header.masthead .site-heading {
+            font-size:2rem;
+            text-align:center}
+
+
+footer .container .footer-line .list-inline p {
+            padding:30px}

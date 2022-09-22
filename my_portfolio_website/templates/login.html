@@ -1,0 +1,36 @@
+{% extends "bootstrap/wtf.html" as wtf %}
+{% block content %}
+{% import "header.html" %}
+<header class="masthead" style="background-image: url('static/image/index.jpg')">
+        <div class="overlay"></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+              <div class="site-heading">
+                <h1>Log In!</h1>
+                <span class="subheading">歡迎回來!</span>
+              </div>
+            </div>
+          </div>
+      </div>
+</header>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto ">
+            {% with messages=get_flashed_messages() %}
+                {% if messages %}
+                    {% for message in messages %}
+                    <h1>{{ message }}</h1>
+                    {% endfor% }
+                {% endif %}
+            {% endwith %}
+            {{ wtf.quick_form(form, novalidate=True, button_map={"submit":"primary" }) }}
+        </div>
+    </div>
+</div>
+
+
+
+{% import "footer.html" %}
+{% endblock %}

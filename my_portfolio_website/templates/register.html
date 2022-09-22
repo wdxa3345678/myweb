@@ -1,0 +1,28 @@
+{% import "bootstrap/wtf.html" as wtf %}
+{% block content %}
+{% extends "header.html" %}
+<header class="masthead" style="background-image: url('static/image/index.jpg')">
+        <div class="overlay"></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+              <div class="site-heading">
+                <h1>Register!</h1>
+                <span class="subheading">請註冊您的個人帳號</span>
+              </div>
+            </div>
+          </div>
+      </div>
+</header>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+            {{ wtf.quick_form(form, novalidate=True,button_map={"submit":"primary"}}}
+        </div>
+    </div>
+</div>
+
+{% extends "footer.html" %}
+{% endblock %}

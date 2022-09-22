@@ -1,0 +1,30 @@
+{% extends "bootstrap/wtf.html" as wtf %}
+{% block content %}
+{% import header.html %}
+<header class="masthead" style="background-image: url('static/image/index.jpg')">
+        <div class="overlay"></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+              <div class="site-heading">
+                <h1>Welcome to the page for {{ current_user.username }}!</h1>
+                <span class="subheading">變更帳戶資訊</span>
+              </div>
+            </div>
+          </div>
+      </div>
+</header>
+<div align="center">
+    <img align="center" src="{{url_for('static',filename='profile_pics/'+current_user. profile_image)}}">
+    <h2>{{ current_user.email }}</h2>
+</div>
+
+<div class="container">
+    <div class="col-lg-8 col-mg-10 col-mx-auto">
+        {% wtf.quick_form(form, novalidate=True, button_map={"submit":primary}) %}
+    </div>
+</div>
+
+
+{% import footer.html%}
+{% endblock %}
